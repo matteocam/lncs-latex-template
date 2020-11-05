@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifFullVersion
+\newif\ifShortVersion
+\newif\ifComments
+\Commentsfalse
+%\Commentstrue
+
+%%%%%    MAIN FLAGS    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  FullVersion = true  -  With examples, proofs within text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\FullVersiontrue
+
+%% Default Actions %%
+\ifFullVersion
+\ShortVersionfalse
+\else
+\ShortVersiontrue
+\fi
+
+%%%%%%%%%%%%
+
+
+
+
+
+\documentclass[a4paper, 11pt]{article}
+
+\input{mysettings}
+\input{mycommands}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\title{Title here }
+\author{}
+\date{}
+
+\maketitle
+
+\begin{abstract}
+Abstract here
+\end{abstract}
+
+
+%\tableofcontents
+%\pagebreak
+
+\overfullrule=0pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec:intro}
+\input{sections/intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{cryptobib/abbrev3,cryptobib/crypto,others}
+
+\end{document}

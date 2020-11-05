@@ -1,0 +1,104 @@
+
+\newcommand{\expectation}{\mathop{\mathbb{E}}}
+
+% Some shortcuts for math symbols
+\newcommand{\binstrings}{\{0, 1\}^{*}}
+\newcommand{\bits}{\{0, 1\}^{*}}
+%\newcommand{\iff}{\Leftrightarrow}
+\newcommand{\bit}{\{0, 1\}}
+\newcommand{\funonstrings}{: \binstrings \to \binstrings}
+
+\newcommand{\vecarr}[1]{\vv{#1}}
+
+\newcommand{\multilinePr}[2]{\Pr\left[\begin{aligned}#1\end{aligned} \;:\; \begin{aligned}#2\end{aligned}\right]}
+
+\newcommand{\naturals}{\mathbb{N}}\label{key}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\field}{\mathbb{F}}
+
+% Circuit Family
+\newcommand{\circfam}{\{C_n\}_{n=1}^{\infty}}
+\newcommand{\langL}{\mathcal{L}}
+
+% Interactive Proofs
+\newcommand{\transc}{\mathcal{T}}
+
+\makeatletter
+\newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
+\makeatother
+
+\newcommand{\suptuple}[1]{(#1^{(j)})_{j \in [\ell]}}
+\newcommand{\dsuptuple}[2]{(#1^{(j)}, #2^{(j)})_{j \in [\ell]}}
+\newcommand{\tsuptuple}[3]{(#1^{(j)}, #2^{(j)}, #3^{(j)})_{j \in [\ell]}}
+
+
+
+\ifcsmacro{remark}{}{\newtheorem{remark}{Remark}}
+
+\newtheorem{mydef}{Definition}
+\newtheorem{mythm}{Theorem}
+\newtheorem{mylemma}{Lemma}
+\newtheorem{mycorollary}{Corollary}
+\newtheorem{myassump}{Assumption}
+\newtheorem{myproposition}{Proposition}
+\newtheorem{myclaim}{Claim}
+
+\newcommand{\binstring}{\{0, 1\}}
+
+% Basic tools
+\newcommand{\mklst}[2]{#1_{1},\dots, #1_{#2}}
+\newcommand{\mklstgen}[3]{#1_{#2},\dots, #1_{#3}}
+
+% Shortcuts for tuples (actually vectors)
+\newcommand{\tuple}[3][j]{(#2_#1)_{#1 \in [#3]}} 
+\newcommand{\tupleN}[3][j]{\vec{#2} = \tuple[#1]{#2}{#3}}
+\newcommand{\tuplez}[3][j]{(#2_#1)_{#1 \in [0,#3]}} 
+
+% Notations
+\def\rel{\mathsf{R}}
+\def\unlambda{1^{\lambda}}
+
+\def\inp{{\mathsf x}}
+\def\cwit{{\mathsf u}}
+\def\fwit{{\mathsf \omega}}
+\def\wit{{\mathsf w}}
+
+
+% Ensemble
+\newcommand{\ens}[1]{\{#1_{\lambda}\}_{\lambda\in\naturals}}
+
+\def\Hash{{\sf H}}
+\newcommand{\checkeq}{\stackrel{?}{=}}
+\newcommand{\chequiv}{\stackrel{?}{\equiv}}
+\newcommand{\checkless}{\stackrel{?}{<}}
+\newcommand{\cheqless}{\stackrel{?}{\leq}}
+
+
+
+\def\extr{\mathcal{E}}
+\def\crs{\func{srs}}
+
+\newcommand\parseas[2]{\text{Parse } #1 \text{ as } #2}
+\newcommand\dparseas[4]{\text{Parse } #1 \text{ as } #2; #3 \text{ as } #4}
+
+% BEGIN ZK defs
+
+\def\Sim{\mathcal{S}}
+\def\Spp{\mathcal{\Sim_{\ck}}}
+\def\Skg{\mathcal{\Sim_{\func{kg}}}}
+\def\Sprv{\mathcal{\Sim_{\func{prv}}}}
+% == SOME NAME ==
+\def\snark{SNARK\xspace}
+\def\zksnark{zkSNARK\xspace}
+\def\snarks{SNARKs\xspace}
+\def\zksnarks{zkSNARKs\xspace}
+\def\ccsnark{cc-SNARK\xspace}
+\def\ccsnarks{cc-SNARKs\xspace}
+\def\cpsnark{CP-SNARK\xspace}
+\def\cpsnarks{CP-SNARKs\xspace}
+
+% Prover and Verifier
+\def\P{\mathcal{P}}
+\def\V{\mathcal{V}}
+
+% Polynomial commitment

@@ -1,0 +1,192 @@
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{bbm}
+
+\usepackage{amsthm} %ENV proof
+\usepackage{mathtools}
+\usepackage{subcaption}
+%\usepackage{hhline}
+
+\usepackage{braket}
+
+\usepackage{afterpage}
+\usepackage{fancyhdr} 
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{framed} 
+\usepackage{array} 
+\usepackage{graphicx} 
+\usepackage{graphics}
+\usepackage{mathtools} 
+\usepackage{tikz} 
+\usepackage{verbatim}
+\usepackage{float}
+%\usepackage{bm}
+\usepackage{comment}
+\usepackage{relsize}
+\usepackage{xcolor}
+\usepackage[Symbol]{upgreek}
+\usepackage{placeins}
+%\usepackage{esvect}
+\usepackage{xspace}
+\usepackage{breakcites}
+\usepackage{enumerate}
+%\usepackage{bbm} % for ones function
+\usepackage{setspace}
+\usepackage{titlecaps}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{booktabs} % used to make double clines in tables
+\usepackage{colortbl} %used to color rows of a table
+
+\usepackage[]{hyperref}
+%\hypersetup{
+%	colorlinks
+%	%allcolors=black
+%	%urlcolor=black
+%}
+\usepackage{cleveref}
+%\cref{section}{S}{SS}
+%\Crefname{section}{S}{SS}
+
+\usepackage{wrapfig}
+
+\usepackage[
+	lambda,
+	advantage,
+	operators,
+	sets,
+	adversary,
+	landau,
+	probability,
+	notions,
+	logic,
+	ff,
+	mm,
+	primitives,
+	events,
+	complexity,
+	asymptotics,
+	keys
+	]{cryptocode}
+
+
+\let\st\undefined % To avoid conflicts with soul package
+\usepackage{soul}
+
+\usepackage[normalem]{ulem} %for the \sout command
+
+
+% Select what to do with todonotes: 
+% \usepackage[disable]{todonotes} % notes not showed
+\usepackage[draft]{todonotes}   % notes showed
+
+% to prevent several cites to overflow the margin
+\usepackage{breakcites}
+
+% For Chancery font, i.e. \mathpzc
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+%\usepackage{bm} %for bold symbol
+
+\usepackage[LGR,T1]{fontenc}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+\usepackage{adjustbox}
+\newcommand{\headrow}[1]{\multicolumn{1}{c}{\adjustbox{angle=45,lap=\width-0.5em}{#1}}}
+
+% = = = Table bullets: \full and \prt (full and part)
+
+\newcommand{\full}{$\bullet$}
+\newcommand{\prt}{$\circ$}
+
+\newcommand{\fulltext}{\CIRCLE}
+\newcommand{\prttext}{\LEFTcircle}
+
+\newcommand{\fulltable}{$\tiny{\CIRCLE}$}
+\newcommand{\prttable}{$\tiny{\LEFTcircle}$}
+
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+%\newcommandx{\af}[2][1=]{
+%%\newcommand{\antonio}[1]{
+%\todo[color=orange!50, size=\footnotesize,#1]{{\bf AF}: #2 }
+%}
+
+\ifComments
+\newcommand{\af}[1]{{\noindent\color{purple!65!black}{\textbf{~#1 -- AF}}}}
+\newcommand{\matteo}[1]{{\noindent\color{red!90!black}{\textbf{#1 -- MC}}}}
+\newcommand{\dario}[1]{{\noindent\color{blue!90!black}{\textbf{#1 -- DF}}}}
+\newcommand{\anais}[1]{{\noindent\color{pink!40!red}{\textbf{#1 -- AQ}}}}
+\else
+\newcommand{\af}[1]				{}
+\newcommand{\matteo}[1]{}
+\newcommand{\dario}[1]	{}
+\newcommand{\anais}[1]	{}
+\fi
+
+%\newcommand{\PSevl}[1][]{\mathcmd{\mathbf{PEvl}\if!#1!\else^{#1}\fi}}
+
+%\def\af{\antonio}
+
+%\newcommand{\afpar}[1]{
+%\todo[color=orange!50, size=\footnotesize]{{\bf AF}: #1 }
+%}
+
+
+\newcommand{\tmpdraft}[1]{{\noindent\color{green!25!black}{#1}}}
+
+\newcommand*{\trightarrow}[1]{\xrightarrow{\mathmakebox[5cm]{#1}}}
+\newcommand*{\tleftarrow}[1]{\xleftarrow{\mathmakebox[5cm]{#1}}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+%\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\usepackage{enumitem}
+\setdescription{labelindent=0pt,leftmargin=6pt,itemsep=1pt}
+\setitemize{labelindent=2pt,leftmargin=10pt,itemsep=1pt}
+\setenumerate{labelindent=1pt,leftmargin=10pt,itemsep=1pt}
+
+%\newenvironment{corollary}{\medskip{\sc{Corollary}} \quad}{}
+%\newenvironment{lemma}{\medskip{\sc{Lemma}} \quad}{}
+%\newenvironment{proof}{\medskip{\sc{Proof}} \quad}{\hfill$\square$}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\scshape}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
