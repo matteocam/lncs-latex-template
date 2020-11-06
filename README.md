@@ -10,3 +10,9 @@ git submodule update --init # for cryptobib
 ```
 
 Now you can compile main.tex with your favorite LaTeX compiler/IDE.
+
+To set this up to your own repo you can then run (for example):
+
+```
+git remote set-url origin http://github.com/YOU/YOUR_REPO
+```
