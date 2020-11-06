@@ -110,21 +110,12 @@
 \newcommand{\prttable}{$\tiny{\LEFTcircle}$}
 
 \usepackage{xargs}                      % Use more than one optional parameter in a new commands
-%\newcommandx{\af}[2][1=]{
-%%\newcommand{\antonio}[1]{
-%\todo[color=orange!50, size=\footnotesize,#1]{{\bf AF}: #2 }
-%}
+
 
 \ifComments
-\newcommand{\af}[1]{{\noindent\color{purple!65!black}{\textbf{~#1 -- AF}}}}
 \newcommand{\matteo}[1]{{\noindent\color{red!90!black}{\textbf{#1 -- MC}}}}
-\newcommand{\dario}[1]{{\noindent\color{blue!90!black}{\textbf{#1 -- DF}}}}
-\newcommand{\anais}[1]{{\noindent\color{pink!40!red}{\textbf{#1 -- AQ}}}}
 \else
-\newcommand{\af}[1]				{}
 \newcommand{\matteo}[1]{}
-\newcommand{\dario}[1]	{}
-\newcommand{\anais}[1]	{}
 \fi
 
 %\newcommand{\PSevl}[1][]{\mathcmd{\mathbf{PEvl}\if!#1!\else^{#1}\fi}}
